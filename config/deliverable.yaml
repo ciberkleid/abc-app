@@ -1,0 +1,20 @@
+apiVersion: carto.run/v1alpha1
+kind: Deliverable
+metadata:
+  namespace: default
+  name: abc-app
+  labels:
+    app.kubernetes.io/component: deliverable
+    app.kubernetes.io/part-of: abc-app
+    app.tanzu.vmware.com/deliverable-type: web
+spec:
+  params:
+  - name: gitops_ssh_secret
+    value: git-ssh
+  - name: gitops_sub_path
+    value: config/dev/abc-app
+  source:
+    git:
+      ref:
+        branch: main
+      url: "https://github.com/asaikali/tap-run-gitops.git"
