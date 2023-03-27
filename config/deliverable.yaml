@@ -10,13 +10,13 @@ metadata:
     carto.run/workload-name: abc-app
     carto.run/workload-namespace: dev
 spec:
-  params:
-  - name: gitops_ssh_secret
-    value: git-ssh
-  - name: gitops_sub_path
-    value: config/dev/abc-app
   source:
     git:
       ref:
         branch: main
       url: "https://github.com/asaikali/tap-run-gitops.git"
+  params:
+  - name: gitops_ssh_secret
+    value: git-ssh
+  - name: gitops_sub_path
+    value: config/dev/abc-app
