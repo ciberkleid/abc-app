@@ -8,11 +8,6 @@ metadata:
     apps.tanzu.vmware.com/has-tests: "true"
     app.kubernetes.io/part-of: abc-app
 spec:
-  source:
-    git:
-      url: https://github.com/ciberkleid/abc-app
-      ref:
-        branch: main
   params:
   - name: annotations
     value:
@@ -25,3 +20,8 @@ spec:
     value: tap-run-gitops
   - name: gitops_ssh_secret
     value: git-ssh
+  source:
+    git:
+      url: https://github.com/ciberkleid/abc-app
+      ref:
+        branch: main
