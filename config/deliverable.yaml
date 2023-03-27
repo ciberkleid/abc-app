@@ -7,6 +7,8 @@ metadata:
     app.kubernetes.io/component: deliverable
     app.kubernetes.io/part-of: abc-app
     app.tanzu.vmware.com/deliverable-type: web
+    carto.run/workload-name: abc-app
+    carto.run/workload-namespace: dev
 spec:
   params:
   - name: gitops_ssh_secret
